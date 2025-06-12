@@ -2,15 +2,19 @@ import {
   Home,
   Analytics,
   People,
-  Reviews,
+  ReviewsOutlined,
   Campaign,
   Email,
   Feedback,
   Support,
+  Settings,
+  Logout,
+  GridView,
+  Assessment,
 } from '@mui/icons-material'
 import { NavItem, RouteConfig } from '@/types/navigation'
 
-export const navigationItems: NavItem[] = [
+export const navigationItems1: NavItem[] = [
   {
     id: 'home',
     label: 'Home',
@@ -21,13 +25,13 @@ export const navigationItems: NavItem[] = [
     id: 'reviews',
     label: 'Reviews',
     href: '/reviews',
-    icon: Reviews,
+    icon: ReviewsOutlined,
   },
   {
     id: 'facilities',
     label: 'Facilities',
     href: '/facilities',
-    icon: Reviews,
+    icon: GridView,
   },
   {
     id: 'campaigns',
@@ -39,10 +43,11 @@ export const navigationItems: NavItem[] = [
     id: 'analytics',
     label: 'Analytics',
     href: '/analytics',
-    icon: Analytics,
+    icon: Assessment,
   },
+]
 
-
+export const navigationItems2: NavItem[] = [
   {
     id: 'customers',
     label: 'Customers',
@@ -71,7 +76,7 @@ export const navigationItems: NavItem[] = [
     id: 'review-management',
     label: 'Review Management',
     href: '/review-management',
-    icon: Reviews,
+    icon: ReviewsOutlined,
   },
   {
     id: 'support',
@@ -86,6 +91,22 @@ export const navigationItems: NavItem[] = [
     icon: Support,
   },
 ]
+
+export const navigationItems3: NavItem[] = [
+  {
+    id: 'settings',
+    label: 'Settings',
+    href: '/settings',
+    icon: Settings,
+  },
+  {
+    id: 'logout',
+    label: 'Logout',
+    href: '/logout',
+    icon: Logout,
+  },
+]
+
 
 export const routeConfigs: RouteConfig[] = [
   {
