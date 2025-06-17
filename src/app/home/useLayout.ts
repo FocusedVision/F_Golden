@@ -92,10 +92,7 @@ export const useLayout = () => {
 
   const handleProfileMenuOpen = useCallback(
     (event: React.MouseEvent<HTMLElement>) => {
-      console.log("handleProfileMenuOpen called", event);
-      // Capture currentTarget immediately before React clears it
       const currentTarget = event.currentTarget;
-
       setState((prev) => ({
         ...prev,
         profileMenuAnchor: currentTarget,

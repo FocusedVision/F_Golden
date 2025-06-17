@@ -21,7 +21,6 @@ export const TopBar: React.FC<TopBarProps> = ({
   profileMenuAnchor,
   onProfileMenuClose,
 }) => {
-  console.log("profileMenuAnchor", profileMenuAnchor);
   const handleSearch = (query: string) => {
     // Handle search functionality
     console.log("Search query:", query);

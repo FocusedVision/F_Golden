@@ -82,7 +82,18 @@ export interface FacilityData {
   average_rate: number;
   feedback_not_reviewed: number;
   review_not_responded: number;
-  performance: "Good" | "Bad" | "Normal";
+  performance: "good" | "bad" | "normal";
+}
+
+export interface ReviewData {
+  tenent: string;
+  unit: string;
+  rating: number;
+  review: string;
+  facility: string;
+  review_site: string;
+  date: string;
+  status: string;
 }
 
 export interface ProgressBarData {
@@ -113,6 +124,11 @@ export interface FacilityProps {
   className?: string;
 }
 
+export interface ReviewProps {
+  data: ReviewData[];
+  className?: string;
+}
+
 export interface FeedbackStatsProps {
   data: FeedbackStatData[];
   className?: string;
@@ -131,7 +147,7 @@ export interface ProgressBarProps {
 }
 
 export interface ChipProps {
-  variant: "success" | "error" | "warning" | "info" | "neutral";
+  variant: "good" | "bad" | "normal" | "published" | "unpublished";
   children: React.ReactNode;
   size?: "sm" | "md" | "lg";
 }

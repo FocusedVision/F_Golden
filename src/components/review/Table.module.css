@@ -1,15 +1,15 @@
-.facilitySection {
+.reviewSection {
   background: var(--color-surface);
   border-radius: var(--border-radius-xl);
   overflow: hidden;
   transition: all var(--transition-base);
 }
 
-.facilitySection:hover {
+.reviewSection:hover {
   box-shadow: var(--shadow-lg);
 }
 
-.facilityWrapper {
+.reviewWrapper {
   overflow-x: auto;
   overflow-y: visible;
 }
@@ -43,6 +43,8 @@
 
 .tableRow {
   transition: all var(--transition-fast);
+  height: 125px;
+  border-bottom: 1px solid var(--color-border-primary);
 }
 
 .tableRow:hover {
@@ -57,15 +59,11 @@
   vertical-align: middle;
 }
 
-.facilityLogo {
-  font-weight: var(--font-weight-medium);
-  color: var(--color-text-primary) !important;
-}
-
-.facilityName {
+.tenent {
   font-weight: var(--font-weight-medium);
   color: var(--color-text-primary) !important;
   min-width: 200px;
+  text-align: center !important;
 }
 
 .numberCell {
@@ -73,6 +71,13 @@
   font-weight: var(--font-weight-medium);
   font-variant-numeric: tabular-nums;
   min-width: 80px;
+}
+
+.review {
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-primary) !important;
+  max-width: 300px !important;
+  text-align: center !important;
 }
 
 .performanceCell {
@@ -93,7 +98,7 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .facilitySection {
+  .reviewSection {
     border-radius: var(--border-radius-lg);
     margin: 0 calc(-1 * var(--spacing-4));
   }
@@ -108,7 +113,7 @@
     font-size: var(--font-size-xs);
   }
 
-  .facilityName {
+  .tenent {
     min-width: 120px;
   }
 
@@ -122,7 +127,7 @@
 }
 
 @media (max-width: 480px) {
-  .facilitySection {
+  .reviewSection {
     margin: 0 calc(-1 * var(--spacing-3));
   }
 
@@ -135,7 +140,7 @@
     padding: var(--spacing-2);
   }
 
-  .facilityName {
+  .tenent {
     min-width: 100px;
   }
 
@@ -149,20 +154,20 @@
 }
 
 /* Custom scrollbar for table wrapper */
-.facilityWrapper::-webkit-scrollbar {
+.reviewWrapper::-webkit-scrollbar {
   height: 8px;
 }
 
-.facilityWrapper::-webkit-scrollbar-track {
+.reviewWrapper::-webkit-scrollbar-track {
   background: var(--color-neutral-800);
   border-radius: var(--border-radius-base);
 }
 
-.facilityWrapper::-webkit-scrollbar-thumb {
+.reviewWrapper::-webkit-scrollbar-thumb {
   background: var(--color-neutral-600);
   border-radius: var(--border-radius-base);
 }
 
-.facilityWrapper::-webkit-scrollbar-thumb:hover {
+.reviewWrapper::-webkit-scrollbar-thumb:hover {
   background: var(--color-neutral-500);
 }

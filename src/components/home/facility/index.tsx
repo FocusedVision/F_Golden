@@ -4,18 +4,18 @@ import React from "react";
 import { FacilityProps, FacilityData } from "@/types/homeLayout";
 import styles from "./Custom.module.css";
 import Image from "next/image";
-import Chip from "./Chip";
+import Chip from "../../chip/Chip";
 
 const Facility: React.FC<FacilityProps> = ({ data }) => {
   const getPerformanceVariant = (performance: FacilityData["performance"]) => {
     switch (performance) {
-      case "Good":
-        return "success";
-      case "Bad":
-        return "error";
-      case "Normal":
+      case "good":
+        return "good";
+      case "bad":
+        return "bad";
+      case "normal":
       default:
-        return "warning";
+        return "normal";
     }
   };
 

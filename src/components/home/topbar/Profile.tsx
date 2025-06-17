@@ -10,8 +10,6 @@ const Profile: React.FC<ProfileSectionProps> = ({
   className = "",
 }) => {
   const handleClick = (e: React.MouseEvent<HTMLElement>) => {
-    console.log("Profile clicked!", e.currentTarget);
-
     if (onClick) {
       onClick(e);
     } else {

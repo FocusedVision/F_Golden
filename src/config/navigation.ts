@@ -23,25 +23,25 @@ export const navigationItems1: NavItem[] = [
   {
     id: "reviews",
     label: "Reviews",
-    href: "/reviews",
+    href: "/home/reviews",
     icon: ReviewsOutlined,
   },
   {
     id: "facilities",
     label: "Facilities",
-    href: "/facilities",
+    href: "/home/facilities",
     icon: GridView,
   },
   {
     id: "campaigns",
     label: "Campaigns",
-    href: "/campaigns",
+    href: "/home/campaigns",
     icon: Campaign,
   },
   {
     id: "analytics",
     label: "Analytics",
-    href: "/analytics",
+    href: "/home/analytics",
     icon: Assessment,
   },
 ];
@@ -50,43 +50,43 @@ export const navigationItems2: NavItem[] = [
   {
     id: "customers",
     label: "Customers",
-    href: "/customers",
+    href: "/home/customers",
     icon: People,
   },
   {
     id: "es-templates",
     label: "Email/SMS templates",
-    href: "/es-templates",
+    href: "/home/es-templates",
     icon: Email,
   },
   {
     id: "team-management",
     label: "Team Management",
-    href: "/team-management",
+    href: "/home/team-management",
     icon: People,
   },
   {
     id: "feedback",
     label: "Feedback Submissions",
-    href: "/feedback-submissions",
+    href: "/home/feedback-submissions",
     icon: Feedback,
   },
   {
     id: "review-management",
     label: "Review Management",
-    href: "/review-management",
+    href: "/home/review-management",
     icon: ReviewsOutlined,
   },
   {
     id: "support",
     label: "Support",
-    href: "/support",
+    href: "/home/support",
     icon: Support,
   },
   {
     id: "audit-logs",
     label: "Audit Logs",
-    href: "/audit-logs",
+    href: "/home/audit-logs",
     icon: Support,
   },
 ];
@@ -95,13 +95,13 @@ export const navigationItems3: NavItem[] = [
   {
     id: "settings",
     label: "Settings",
-    href: "/settings",
+    href: "/home/settings",
     icon: Settings,
   },
   {
     id: "logout",
     label: "Logout",
-    href: "/logout",
+    href: "/home/logout",
     icon: Logout,
   },
 ];
@@ -112,47 +112,47 @@ export const routeConfigs: RouteConfig[] = [
     title: "Home",
   },
   {
-    path: "/reviews",
+    path: "/home/reviews",
     title: "Reviews",
   },
   {
-    path: "/facilities",
+    path: "/home/facilities",
     title: "Facilities",
   },
   {
-    path: "/campaigns",
+    path: "/home/campaigns",
     title: "Campaigns",
   },
   {
-    path: "/analytics",
+    path: "/home/analytics",
     title: "Analytics",
   },
   {
-    path: "/customers",
+    path: "/home/customers",
     title: "Customers",
   },
   {
-    path: "/es-templates",
+    path: "/home/es-templates",
     title: "Email/SMS templates",
   },
   {
-    path: "/team-management",
+    path: "/home/team-management",
     title: "Team Management",
   },
   {
-    path: "/feedback-submissions",
+    path: "/home/feedback-submissions",
     title: "Feedback Submissions",
   },
   {
-    path: "/review-management",
+    path: "/home/review-management",
     title: "Review Management",
   },
   {
-    path: "/support",
+    path: "/home/support",
     title: "Support",
   },
   {
-    path: "/audit-logs",
+    path: "/home/audit-logs",
     title: "Audit Logs",
   },
 ];

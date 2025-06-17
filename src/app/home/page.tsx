@@ -80,7 +80,7 @@ const facilityData: FacilityData[] = [
     average_rate: 24,
     feedback_not_reviewed: 4.0,
     review_not_responded: 40,
-    performance: "Good",
+    performance: "good",
   },
 ];
 

@@ -2,22 +2,23 @@
 
 import React from "react";
 import { ChipProps } from "@/types/homeLayout";
-import styles from "./Custom.module.css";
+import styles from "./Chip.module.css";
 
 const Chip: React.FC<ChipProps> = ({ variant, children, size = "md" }) => {
   const getVariantClass = () => {
     switch (variant) {
-      case "success":
-        return styles.chipSuccess;
-      case "error":
-        return styles.chipError;
-      case "warning":
-        return styles.chipWarning;
-      case "info":
-        return styles.chipInfo;
-      case "neutral":
+      case "good":
+        return styles.chipGood;
+      case "bad":
+        return styles.chipBad;
+      case "normal":
+        return styles.chipNormal;
+      case "published":
+        return styles.chipPublished;
+      case "unpublished":
+        return styles.chipUnpublished;
       default:
-        return styles.chipNeutral;
+        return styles.chipNormal;
     }
   };
 

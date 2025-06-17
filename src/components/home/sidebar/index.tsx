@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
+import Link from "next/link";
 
 import Image from "next/image";
 import { Close } from "@mui/icons-material";
@@ -60,7 +61,7 @@ export function Sidebar({
       return pathname === "/";
     }
     // Handle dashboard path specifically
-    if (href === "/dashboard") {
+    if (href === "/home") {
       return pathname === href;
     }
     // For other paths, check if pathname starts with href and is followed by / or end of string
@@ -79,94 +80,95 @@ export function Sidebar({
         }}
         key={item.id}
       >
-        <ListItemButton
-          href={item.href}
-          onClick={isMobile ? onClose : undefined}
-          sx={{
-            minHeight: 48,
-            justifyContent: collapsed ? "center" : "flex-start",
-            px: collapsed ? 1 : 2.5,
-            py: 1,
-            mx: collapsed ? 1 : 1.5,
-            borderRadius: 2,
-            backgroundColor: active
-              ? "rgba(245, 196, 81, 0.15)"
-              : "transparent",
-            border: active
-              ? "1px solid rgba(245, 196, 81, 0.3)"
-              : "1px solid transparent",
-            transition: "all 0.2s ease-in-out",
-            position: "relative",
-            "&:hover": {
-              backgroundColor: active
-                ? "rgba(245, 196, 81, 0.2)"
-                : "rgba(255, 255, 255, 0.05)",
-              border: "1px solid rgba(245, 196, 81, 0.2)",
-            },
-            "&::before": active
-              ? {
-                  content: '""',
-                  position: "absolute",
-                  left: 0,
-                  top: "50%",
-                  transform: "translateY(-50%)",
-                  width: 3,
-                  height: "60%",
-                  backgroundColor: "#F5C451",
-                  borderRadius: "0 2px 2px 0",
-                }
-              : {},
-          }}
-        >
-          <ListItemIcon
+        <Link href={item.href}>
+          <ListItemButton
+            onClick={isMobile ? onClose : undefined}
             sx={{
-              minWidth: 0,
-              mr: collapsed ? 0 : 2,
-              justifyContent: "center",
+              minHeight: 48,
+              justifyContent: collapsed ? "center" : "flex-start",
+              px: collapsed ? 1 : 2.5,
+              py: 1,
+              mx: collapsed ? 1 : 1.5,
+              borderRadius: 2,
+              backgroundColor: active
+                ? "rgba(245, 196, 81, 0.15)"
+                : "transparent",
+              border: active
+                ? "1px solid rgba(245, 196, 81, 0.3)"
+                : "1px solid transparent",
+              transition: "all 0.2s ease-in-out",
+              position: "relative",
+              "&:hover": {
+                backgroundColor: active
+                  ? "rgba(245, 196, 81, 0.2)"
+                  : "rgba(255, 255, 255, 0.05)",
+                border: "1px solid rgba(245, 196, 81, 0.2)",
+              },
+              "&::before": active
+                ? {
+                    content: '""',
+                    position: "absolute",
+                    left: 0,
+                    top: "50%",
+                    transform: "translateY(-50%)",
+                    width: 3,
+                    height: "60%",
+                    backgroundColor: "#F5C451",
+                    borderRadius: "0 2px 2px 0",
+                  }
+                : {},
             }}
           >
-            <item.icon
+            <ListItemIcon
               sx={{
-                color: active ? "#F5C451" : "#FFFFFF",
-                fontSize: 20,
-                transition: "color 0.2s ease-in-out",
+                minWidth: 0,
+                mr: collapsed ? 0 : 2,
+                justifyContent: "center",
               }}
-            />
-          </ListItemIcon>
-
-          {!collapsed && (
-            <ListItemText
-              primary={item.label}
-              sx={{
-                margin: 0,
-                opacity: collapsed ? 0 : 1,
-                transition: "opacity 0.2s ease-in-out",
-                "& .MuiListItemText-primary": {
-                  fontSize: "0.9rem",
-                  fontWeight: active ? 600 : 500,
+            >
+              <item.icon
+                sx={{
                   color: active ? "#F5C451" : "#FFFFFF",
-                  fontFamily: "Nunito Sans, sans-serif",
-                  letterSpacing: "0.02em",
+                  fontSize: 20,
                   transition: "color 0.2s ease-in-out",
-                },
-              }}
-            />
-          )}
+                }}
+              />
+            </ListItemIcon>
 
-          {item.badge && !collapsed && (
-            <Badge
-              badgeContent={item.badge}
-              color="error"
-              sx={{
-                "& .MuiBadge-badge": {
-                  fontSize: "0.625rem",
-                  height: 16,
-                  minWidth: 16,
-                },
-              }}
-            />
-          )}
-        </ListItemButton>
+            {!collapsed && (
+              <ListItemText
+                primary={item.label}
+                sx={{
+                  margin: 0,
+                  opacity: collapsed ? 0 : 1,
+                  transition: "opacity 0.2s ease-in-out",
+                  "& .MuiListItemText-primary": {
+                    fontSize: "0.9rem",
+                    fontWeight: active ? 600 : 500,
+                    color: active ? "#F5C451" : "#FFFFFF",
+                    fontFamily: "Nunito Sans, sans-serif",
+                    letterSpacing: "0.02em",
+                    transition: "color 0.2s ease-in-out",
+                  },
+                }}
+              />
+            )}
+
+            {item.badge && !collapsed && (
+              <Badge
+                badgeContent={item.badge}
+                color="error"
+                sx={{
+                  "& .MuiBadge-badge": {
+                    fontSize: "0.625rem",
+                    height: 16,
+                    minWidth: 16,
+                  },
+                }}
+              />
+            )}
+          </ListItemButton>
+        </Link>
       </ListItem>
     );
 
