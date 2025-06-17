@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import styles from "./Review.module.css";
-import FilterDropdown from "@/components/review/FilterDropdown";
+import FilterDropdown from "@/components/filter/FilterDropdown";
 import SortButton from "@/components/review/SortButton";
 import Table from "@/components/review/Table";
 import { ReviewData } from "@/types/homeLayout";

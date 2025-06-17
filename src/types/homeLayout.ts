@@ -96,6 +96,20 @@ export interface ReviewData {
   status: string;
 }
 
+export interface FeedbackData {
+  date: string;
+  facility: string;
+  tenant: string;
+  communication: number;
+  friendliness: number;
+  cleanliness: number;
+  unit_selection: number;
+  rental_process: number;
+  overall_rating: number;
+  review: string;
+  status: string;
+}
+
 export interface ProgressBarData {
   label: string;
   value: number;
@@ -126,6 +140,11 @@ export interface FacilityProps {
 
 export interface ReviewProps {
   data: ReviewData[];
+  className?: string;
+}
+
+export interface FeedbackProps {
+  data: FeedbackData[];
   className?: string;
 }
 

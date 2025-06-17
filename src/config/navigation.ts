@@ -68,7 +68,7 @@ export const navigationItems2: NavItem[] = [
   {
     id: "feedback",
     label: "Feedback Submissions",
-    href: "/home/feedback-submissions",
+    href: "/home/feedbackSubmission",
     icon: Feedback,
   },
   {
