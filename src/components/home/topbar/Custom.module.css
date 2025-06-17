@@ -1,0 +1,273 @@
+.topBar {
+  background-color: var(--color-topbar-background);
+  border-bottom: 1px solid var(--color-neutral-800);
+  width: 100%;
+  flex-shrink: 0;
+  min-height: var(--header-height);
+  position: relative;
+  z-index: 100;
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  padding: 0 var(--spacing-6);
+  min-height: var(--header-height);
+  gap: var(--spacing-4);
+}
+
+.topBarLeft {
+  display: flex;
+  justify-content: flex-start;
+  gap: var(--spacing-4);
+  width: 50%;
+}
+
+.topBarRight {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--spacing-4);
+  width: 50%;
+}
+
+.menuButton {
+  margin-right: var(--spacing-3);
+  color: var(--color-text-secondary);
+  background: none;
+  border: none;
+  padding: var(--spacing-2);
+  border-radius: var(--border-radius-md);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menuButton:hover {
+  background-color: var(--color-surface-hover);
+  color: var(--color-text-primary);
+}
+
+.searchContainer {
+  flex-grow: 1;
+  max-width: 500px;
+  margin-right: var(--spacing-6);
+}
+
+.searchWrapper {
+  position: relative;
+  border-radius: var(--border-radius-full);
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all var(--transition-fast);
+  width: 100%;
+  height: 40px;
+}
+
+.searchWrapper:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.searchWrapper:focus-within {
+  background-color: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1);
+}
+
+.searchIcon {
+  position: absolute;
+  left: var(--spacing-3);
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  pointer-events: none;
+  z-index: 1;
+  color: var(--color-text-secondary);
+  font-size: 18px;
+}
+
+.searchInput {
+  color: var(--color-text-primary);
+  width: 100%;
+  height: 100%;
+  padding-left: 42px;
+  padding-right: var(--spacing-4);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-normal);
+  background: none;
+  border: none;
+  outline: none;
+  font-family: var(--font-family-primary);
+}
+
+.searchInput::placeholder {
+  color: var(--color-text-secondary);
+  opacity: 1;
+}
+
+.notificationButton {
+  color: var(--color-text-secondary);
+  background: none;
+  border: none;
+  padding: var(--spacing-2);
+  border-radius: var(--border-radius-md);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.notificationButton:hover {
+  color: var(--color-text-primary);
+  background-color: var(--color-surface-hover);
+}
+
+.notificationBadge {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  background-color: var(--color-error-500);
+  color: white;
+  font-size: 11px;
+  min-width: 18px;
+  height: 18px;
+  border-radius: var(--border-radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: var(--font-weight-semibold);
+}
+
+.profileSection {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  cursor: pointer;
+  padding: var(--spacing-2) var(--spacing-3);
+  border-radius: var(--border-radius-2xl);
+  transition: background-color var(--transition-fast);
+}
+
+.profileSection:hover {
+  background-color: var(--color-surface-hover);
+}
+
+.profileAvatar {
+  width: 32px;
+  height: 32px;
+  background-color: var(--color-success-500);
+  color: white;
+  border-radius: var(--border-radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: var(--font-weight-semibold);
+  flex-shrink: 0;
+}
+
+.profileInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.profileName {
+  color: var(--color-text-primary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  line-height: 1;
+  margin: 0;
+}
+
+.profileRole {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-normal);
+  line-height: 1;
+  margin: var(--spacing-1) 0 0 0;
+}
+
+.profileDropdownIcon {
+  margin-left: var(--spacing-1);
+  width: 0;
+  height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 4px solid var(--color-text-secondary);
+}
+
+/* Profile Menu Styles */
+.profileMenu {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-neutral-800);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-lg);
+  min-width: 180px;
+  padding: var(--spacing-2);
+}
+
+.profileMenuItem {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+  padding: var(--spacing-3);
+  border-radius: var(--border-radius-md);
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+  color: var(--color-text-primary);
+  text-decoration: none;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-normal);
+}
+
+.profileMenuItem:hover {
+  background-color: var(--color-surface-hover);
+}
+
+.profileMenuIcon {
+  color: var(--color-text-secondary);
+  font-size: 18px;
+}
+
+@media (max-width: 768px) {
+  .toolbar {
+    padding: 0 var(--spacing-4);
+    gap: var(--spacing-3);
+  }
+
+  .searchContainer {
+    margin-right: var(--spacing-4);
+  }
+
+  .profileInfo {
+    display: none;
+  }
+
+  .profileDropdownIcon {
+    display: none;
+  }
+
+  .topBarRight {
+    gap: var(--spacing-2);
+  }
+}
+
+@media (max-width: 480px) {
+  .toolbar {
+    padding: 0 var(--spacing-3);
+    gap: var(--spacing-2);
+  }
+
+  .searchContainer {
+    margin-right: var(--spacing-3);
+  }
+
+  .menuButton {
+    margin-right: var(--spacing-2);
+  }
+}

@@ -1,0 +1,137 @@
+import { SvgIconComponent } from "@mui/icons-material";
+
+export interface HomeLayoutState {
+  sidebar: SidebarState;
+  profileMenuAnchor: HTMLElement | null;
+  isHydrated: boolean;
+}
+
+export interface SidebarState {
+  open: boolean;
+  collapsed: boolean;
+}
+
+export interface NavItem {
+  id: string;
+  label: string;
+  href: string;
+  icon: SvgIconComponent;
+  badge?: number;
+  children?: NavItem[];
+}
+
+export interface BreadcrumbItem {
+  label: string;
+  href?: string;
+}
+
+export interface RouteConfig {
+  path: string;
+  title: string;
+  description?: string;
+  requiresAuth?: boolean;
+  roles?: string[];
+}
+
+export interface TopBarProps {
+  onSidebarToggle: () => void;
+  onProfileMenuOpen: (event: React.MouseEvent<HTMLElement>) => void;
+  profileMenuAnchor: HTMLElement | null;
+  onProfileMenuClose: () => void;
+}
+
+export interface SearchBarProps {
+  placeholder?: string;
+  onSearch?: (query: string) => void;
+  className?: string;
+}
+
+export interface ProfileSectionProps {
+  user: UserProfile;
+  onClick: (event: React.MouseEvent<HTMLElement>) => void;
+  className?: string;
+}
+
+export interface UserProfile {
+  firstName: string;
+  lastName: string;
+  avatar?: string;
+  initials: string;
+}
+
+export interface NotificationProps {
+  count: number;
+  onClick?: () => void;
+  className?: string;
+}
+
+export interface StatCardData {
+  title: string;
+  value: string;
+  iconSrc: string;
+  trend: string;
+  trendLabel: string;
+  trendDirection: "up" | "down" | "neutral";
+  iconBg: string;
+}
+
+export interface FacilityData {
+  facility_name: string;
+  reviews: number;
+  conversion_rate: number;
+  average_rate: number;
+  feedback_not_reviewed: number;
+  review_not_responded: number;
+  performance: "Good" | "Bad" | "Normal";
+}
+
+export interface ProgressBarData {
+  label: string;
+  value: number;
+  maxValue?: number;
+  color?: "primary" | "success" | "warning" | "error";
+}
+
+export interface FeedbackStatData {
+  name: string;
+  value: number;
+}
+
+export interface ReviewsTrendData {
+  day: string;
+  reviews: number;
+  displayDay: string;
+}
+
+export interface StatCardProps {
+  data: StatCardData;
+  className?: string;
+}
+
+export interface FacilityProps {
+  data: FacilityData[];
+  className?: string;
+}
+
+export interface FeedbackStatsProps {
+  data: FeedbackStatData[];
+  className?: string;
+}
+
+export interface ReviewsTrendProps {
+  data: ReviewsTrendData[];
+  className?: string;
+}
+
+export interface ProgressBarProps {
+  data: ProgressBarData;
+  showLabel?: boolean;
+  showValue?: boolean;
+  className?: string;
+}
+
+export interface ChipProps {
+  variant: "success" | "error" | "warning" | "info" | "neutral";
+  children: React.ReactNode;
+  size?: "sm" | "md" | "lg";
+}
