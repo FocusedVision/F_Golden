@@ -110,6 +110,15 @@ export interface FeedbackData {
   status: string;
 }
 
+export interface ReviewManagementData {
+  date: string;
+  facility: string;
+  tenant: string;
+  overall_rating: number;
+  review: string;
+  response: string;
+}
+
 export interface ProgressBarData {
   label: string;
   value: number;
@@ -145,6 +154,11 @@ export interface ReviewProps {
 
 export interface FeedbackProps {
   data: FeedbackData[];
+  className?: string;
+}
+
+export interface ReviewManagementProps {
+  data: ReviewManagementData[];
   className?: string;
 }
 

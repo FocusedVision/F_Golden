@@ -1,0 +1,47 @@
+.reviewManagementContainer {
+  width: 100%;
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: var(--spacing-6) var(--spacing-6);
+  box-sizing: border-box;
+  animation: fadeIn 0.6s ease-out;
+}
+
+.reviewManagementHeader {
+  display: flex;
+  justify-content: space-between;
+  padding-left: var(--spacing-4);
+  padding-right: var(--spacing-4);
+}
+
+.reviewManagementTitle {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  line-height: var(--line-height-tight);
+  margin: 0;
+}
+
+.reviewManagementContent {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3);
+}
+
+.filtersSection {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3);
+  margin-bottom: var(--spacing-10);
+  padding-left: var(--spacing-4);
+  padding-right: var(--spacing-4);
+}
+
+.filtersGrid {
+  display: flex;
+  justify-content: flex-start;
+  gap: var(--spacing-6);
+  flex-wrap: wrap;
+  align-items: flex-start;
+}

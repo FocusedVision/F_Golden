@@ -74,7 +74,7 @@ export const navigationItems2: NavItem[] = [
   {
     id: "review-management",
     label: "Review Management",
-    href: "/home/review-management",
+    href: "/home/reviewManagement",
     icon: ReviewsOutlined,
   },
   {
@@ -144,7 +144,7 @@ export const routeConfigs: RouteConfig[] = [
     title: "Feedback Submissions",
   },
   {
-    path: "/home/review-management",
+    path: "/home/reviewManagement",
     title: "Review Management",
   },
   {
